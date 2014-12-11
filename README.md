@@ -4,6 +4,19 @@
 
 # markdown-js
 
+## GOOD Modifcations
+
+We added the minimal dialect. In order to create a new version that
+gets committed to the project you are using.
+
+    npm install # (once)
+    ./node_modules/.bin/grunt "-custom:dialects/maruku"
+
+2 tests will fail, but they aren't cases we allow and I didn't want
+to refactor the tests to exclude them.
+
+## Normal README
+
 Yet another Markdown parser, this time for JavaScript. There's a few
 options that precede this project but they all treat Markdown to HTML
 conversion as a single step process. You pass Markdown in and get HTML

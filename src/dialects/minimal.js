@@ -14,7 +14,7 @@ define(['../markdown_helpers', './dialect_helpers', '../parser'], function (Mark
   /**
    * Minimal dialect
    *
-   * No block features and minimal in-line features
+   * Paragraphs, lists and minimal in-line features
    **/
   var Minimal = {
     block: {

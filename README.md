@@ -12,8 +12,10 @@ gets committed to the project you are using.
     npm install # (once)
     ./node_modules/.bin/grunt "-custom:dialects/maruku"
 
-2 tests will fail, but they aren't cases we allow and I didn't want
-to refactor the tests to exclude them.
+In order to accomodate this minimal dialect, refactored tests to
+only test features for minimal that we implemented.
+
+Move generated file in dist/ to project you want to use it in.
 
 ## Normal README
 

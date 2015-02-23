@@ -65,9 +65,12 @@ dialects.Gruber = [
   "headers",
   "horizontal_rules",
   "images",
+  "images-fancy",
   "linebreaks",
   "links",
-  "lists"
+  "lists",
+  "lists-hr",
+  "lists-formatted"
 ];
 
 dialects.Maruku = dialects.Gruber.slice( 0 );
@@ -75,7 +78,8 @@ dialects.Maruku.push( "meta", "definition_lists", "tables" );
 
 dialects.Minimal = [
   "images",
-  "linebreaks"
+  "linebreaks",
+  "lists"
 ];
 
 // TODO if dialects/features were passed on the command line, filter to them

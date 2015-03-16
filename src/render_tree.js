@@ -199,6 +199,7 @@ define(['./core', './markdown_helpers'], function(Markdown, MarkdownHelpers) {
     case "video":
       jsonml[ 1 ].poster = jsonml[ 1 ].href;
       jsonml[ 1 ].type = "video/mp4";
+      jsonml[ 1 ].controls = "yes";
       for (var type in jsonml[ 1 ].videos) {
         jsonml.push( ["source", {"src": jsonml[ 1 ].videos[type], "type": "video/" + type}] );
       }

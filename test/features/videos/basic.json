@@ -1,0 +1,9 @@
+["html",
+  ["p",
+    ["video",
+      {"poster": "/path/to/img.jpg", "alt": "video", "type": "video/mp4"},
+      ["source", {"src": "/path/to/img.m4v", "type": "video/mp4"}],
+      ["source", {"src": "/path/to/img.webm", "type": "video/webm"}]
+    ]
+  ]
+]

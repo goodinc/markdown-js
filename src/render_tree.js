@@ -196,6 +196,15 @@ define(['./core', './markdown_helpers'], function(Markdown, MarkdownHelpers) {
       jsonml[ 1 ].src = jsonml[ 1 ].href;
       delete jsonml[ 1 ].href;
       break;
+    case "video":
+      jsonml[ 1 ].poster = jsonml[ 1 ].href;
+      jsonml[ 1 ].type = "video/mp4";
+      for (var type in jsonml[ 1 ].videos) {
+        jsonml.push( ["source", {"src": jsonml[ 1 ].videos[type], "type": "video/" + type}] );
+      }
+      delete jsonml[ 1 ].href;
+      delete jsonml[ 1 ].videos;
+      break;
     case "linebreak":
       jsonml[ 0 ] = "br";
       break;

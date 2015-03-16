@@ -79,7 +79,8 @@ dialects.Maruku.push( "meta", "definition_lists", "tables" );
 dialects.Minimal = [
   "images",
   "linebreaks",
-  "lists"
+  "lists",
+  "videos"
 ];
 
 // TODO if dialects/features were passed on the command line, filter to them

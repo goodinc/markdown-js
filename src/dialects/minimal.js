@@ -381,11 +381,23 @@ define(['../markdown_helpers', './dialect_helpers', '../parser'], function (Mark
 
           m[2] = this.dialect.inline.__call__.call( this, m[2], /\\/ )[0];
 
-          var attrs = { alt: m[1], href: m[2] || "" };
+          var attrs = {};
+          var tag = "img";
+          var url = m[2] || "";
+
+          // Our video tag:
+          // ![video](/path/to/previewimg "Optional title")
+          if (m[1] === 'video') {
+            tag = "video";
+            attrs["videos"] = { mp4: url.substr(0, url.lastIndexOf(".")) + ".m4v", webm: url.substr(0, url.lastIndexOf(".")) + ".webm" };
+          }
+          attrs["alt"] = m[1];
+          attrs["href"] = url;
+
           if ( m[4] !== undefined)
             attrs.title = m[4];
 
-          return [ m[0].length, [ "img", attrs ] ];
+          return [ m[0].length, [ tag, attrs ] ];
         }
 
         // ![Alt text][id]

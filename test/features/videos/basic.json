@@ -3,7 +3,9 @@
     ["video",
       {"poster": "/path/to/img.jpg", "alt": "video", "type": "video/mp4", "controls": "yes"},
       ["source", {"src": "/path/to/img.m4v", "type": "video/mp4"}],
-      ["source", {"src": "/path/to/img.webm", "type": "video/webm"}]
+      ["source", {"src": "/path/to/img.webm", "type": "video/webm"}],
+      ["img", {"href": "/path/to/img.jpg", "alt": "", "class": "video-fallback"}],
+      ["span", {"class": "video-fallback"}, "View post to play video"]
     ]
   ]
 ]

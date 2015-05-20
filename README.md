@@ -10,7 +10,7 @@ We added the minimal dialect. In order to create a new version that
 gets committed to the project you are using.
 
     npm install # (once)
-    ./node_modules/.bin/grunt "-custom:dialects/maruku"
+    ./node_modules/.bin/grunt "custom:-dialects/maruku"
 
 In order to accomodate this minimal dialect, refactored tests to
 only test features for minimal that we implemented.

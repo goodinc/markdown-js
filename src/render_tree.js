@@ -203,6 +203,11 @@ define(['./core', './markdown_helpers'], function(Markdown, MarkdownHelpers) {
       for (var type in jsonml[ 1 ].videos) {
         jsonml.push( ["source", {"src": jsonml[ 1 ].videos[type], "type": "video/" + type}] );
       }
+
+      // fallback for clients that don’t support video
+      jsonml.push( ["img", {"href": jsonml[ 1 ].href, "alt": "", "class": "video-fallback"}] );
+      jsonml.push( ["span", {"class": "video-fallback"}, "View post to play video"] );
+
       delete jsonml[ 1 ].href;
       delete jsonml[ 1 ].videos;
       break;

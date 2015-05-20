@@ -7,5 +7,8 @@
  * Version: @VERSION
  * Date: @DATE
  */
+ /*
+  * GENERATED FILE: DO NOT MODIFY HERE, MODIFY IN SOURCE REPO
+  */
 
 (function(expose) {

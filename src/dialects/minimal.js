@@ -389,7 +389,12 @@ define(['../markdown_helpers', './dialect_helpers', '../parser'], function (Mark
           // ![video](/path/to/previewimg "Optional title")
           if (m[1] === 'video') {
             tag = "video";
-            attrs["videos"] = { mp4: url.substr(0, url.lastIndexOf(".")) + ".m4v", webm: url.substr(0, url.lastIndexOf(".")) + ".webm" };
+            // does the url have an extension of 4 chars of less
+            if ( (url.substr(-5).indexOf('/') < 0) && (url.substr(-5).indexOf('.') >= 0) ) {
+              // if so, remove it
+              url = url.substr(0, url.lastIndexOf("."))
+            }
+            attrs["videos"] = { mp4: url + ".m4v", webm: url + ".webm" };
           }
           attrs["alt"] = m[1];
           attrs["href"] = url;
